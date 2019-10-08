@@ -1,4 +1,4 @@
-# 2章 AWS Lambda
+# 2章 Lambda
 
 ## 概要
 
