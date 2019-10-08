@@ -6,7 +6,7 @@
 
 ## ゴール
 
-- Lambdaにデプロイにブラウザからアクセスしレスポンスを取得できる
+- Lambdaにデプロイしてブラウザからアクセスしレスポンスを取得できる
 
 ## メモ
 
@@ -16,7 +16,7 @@
 mkdir serverless-sample
 cd serverless-sample
 yarn init -y
-sls create -t aws-nodejs
+serverless create -t aws-nodejs
 yarn add express serverless-http
 serverless config credentials --provider aws --key xxxxxxxxxxxxxx --secret xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 yarn deploy
