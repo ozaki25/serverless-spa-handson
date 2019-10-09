@@ -17,7 +17,7 @@ mkdir serverless-sample
 cd serverless-sample
 yarn init -y
 serverless create -t aws-nodejs
-yarn add express serverless-http
+yarn add express serverless-http cors
 serverless config credentials --provider aws --key xxxxxxxxxxxxxx --secret xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 yarn deploy
 ```
@@ -27,7 +27,11 @@ yarn deploy
 ```js
 const serverless = require('serverless-http');
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
+
+app.use(cors);
 
 app.get('/hello', (req, res) => {
   res.send('Hello');
