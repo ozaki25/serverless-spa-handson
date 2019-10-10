@@ -29,7 +29,7 @@ const app = express();
 const AWS = require('aws-sdk');
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
-app.use(cors);
+app.use(cors());
 
 app.get('/hello', (req, res) => {
   res.send('Hello');
