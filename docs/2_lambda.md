@@ -109,7 +109,7 @@ functions:
 - 関数を作るのに必要なライブラリをインストールします
 
 ```bash
-yarn add express serverless-http cors
+yarn add express serverless-http cors body-parser
 ```
 
 ### 関数の作成
@@ -121,10 +121,12 @@ yarn add express serverless-http cors
 // ライブラリのインポート
 const serverless = require('serverless-http');
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 
 // ライブラリのセットアップ
 const app = express();
+app.use(bodyParser.json());
 app.use(cors());
 
 // 関数の作成
