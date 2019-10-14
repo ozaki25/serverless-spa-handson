@@ -159,7 +159,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"text":"TODO"}' https://xx
 
 ![DynamoDBへ登録](/images/3-2.png)
 
-### DynamoDBにデータを追加する
+### DynamoDBからデータを取得する
 
 - LambdaからDynamoDBにアクセスしデータを取得する処理を追加します
 - `handler.js`を修正してください
