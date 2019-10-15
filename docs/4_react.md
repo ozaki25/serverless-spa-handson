@@ -8,6 +8,37 @@
 
 - ブラウザ上にDynamoDBから取得したデータを表示する
 
+## 登場する技術
+
+- React
+
+### React
+
+- Single Page Applicationを開発するためのJavaScriptのフレームワーク
+
+## ハンズオン
+
+### アプリの雛形生成する
+
+- create-react-appという雛形生成ツールを使う
+
+```bash
+npx create-react-app serverless-sample-client
+```
+
+- 作成したフォルダに移動しアプリを起動する
+
+```bash
+cd serverless-sample-client
+yarn start
+```
+
+- [http://localhost:3000](http://localhost:3000)にアクセスし以下の画面が表示されればOK
+    - 見た目はバージョンによって多少差異があります
+
+![React Hello](/images/4-1.png)
+
+
 ## メモ
 
 - 実行コマンド
