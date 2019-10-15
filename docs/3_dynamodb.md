@@ -91,7 +91,7 @@ serverless deploy
 - 必要なライブラリを追加します
 
 ```bash
-yarn add aws-sdk
+yarn add aws-sdk uuid
 ```
 
 - `handler.js`を修正してください
@@ -101,6 +101,8 @@ const serverless = require('serverless-http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+// ↓↓↓追加した行↓↓↓
+const uuid = require('uuid/v4');
 
 const app = express();
 app.use(bodyParser.json());
@@ -120,7 +122,7 @@ app.post('/todo', async (req, res, next) => {
     // アクセスするテーブル名(サービス名-dev-todo)
     TableName: 'serverless-sample-dev-todo',
     // 追加するデータ
-    Item: { id: String(Date.now()), text },
+    Item: { id: uuid(), text },
   };
 
   try {
